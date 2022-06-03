@@ -18,6 +18,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     esbuildOptions: {
+      esbuildOptions: {
+        inject: ['./buffer-shim.js'],
+      },
       // Node.js global to browser globalThis
       define: {
         global: 'globalThis',
