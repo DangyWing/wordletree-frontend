@@ -5,7 +5,6 @@ import { ref } from 'vue';
 import { LetterState } from '../components/types';
 import Web3Modal from 'web3modal';
 import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
-import WalletConnect from '@walletconnect/web3-provider';
 
 const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS;
 
@@ -34,12 +33,6 @@ export const usePlayerStore = defineStore('player', () => {
       const providerOptions = {
         coinbasewallet: {
           package: CoinbaseWalletSDK,
-          options: {
-            rpc: providerRPC.goerli.rpc,
-          },
-        },
-        walletconnect: {
-          package: WalletConnect,
           options: {
             rpc: providerRPC.goerli.rpc,
           },
