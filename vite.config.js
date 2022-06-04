@@ -18,19 +18,17 @@ export default defineConfig({
   },
   optimizeDeps: {
     esbuildOptions: {
-      esbuildOptions: {
-        inject: ['./buffer-shim.js'],
-      },
-      // Node.js global to browser globalThis
-      define: {
-        global: 'globalThis',
-      },
-      // Enable esbuild polyfill plugins
-      plugins: [
-        NodeGlobalsPolyfillPlugin({
-          buffer: true,
-        }),
-      ],
+      inject: ['./buffer-shim.js'],
     },
+    // Node.js global to browser globalThis
+    define: {
+      global: 'globalThis',
+    },
+    // Enable esbuild polyfill plugins
+    plugins: [
+      NodeGlobalsPolyfillPlugin({
+        buffer: true,
+      }),
+    ],
   },
 });
