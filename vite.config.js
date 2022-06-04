@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from 'url';
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
+// import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
 
 export default defineConfig({
   plugins: [vue()],
@@ -25,10 +25,10 @@ export default defineConfig({
       global: 'globalThis',
     },
     // Enable esbuild polyfill plugins
-    plugins: [
-      NodeGlobalsPolyfillPlugin({
-        buffer: true,
-      }),
-    ],
+    // plugins: [
+    //   NodeGlobalsPolyfillPlugin({
+    //     buffer: true,
+    //   }),
+    // ],
   },
 });
