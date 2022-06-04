@@ -4,7 +4,7 @@ import contractAbi from '../../artifacts/contracts/wordle.json';
 import { ref } from 'vue';
 import { LetterState } from '../components/types';
 import Web3Modal from 'web3modal';
-import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
+// import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
 
 const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS;
 
@@ -31,12 +31,12 @@ export const usePlayerStore = defineStore('player', () => {
       };
 
       const providerOptions = {
-        coinbasewallet: {
-          package: CoinbaseWalletSDK,
-          options: {
-            rpc: providerRPC.goerli.rpc,
-          },
-        },
+        // coinbasewallet: {
+        //   package: CoinbaseWalletSDK,
+        //   options: {
+        //     rpc: providerRPC.goerli.rpc,
+        //   },
+        // },
       };
 
       const web3Modal = new Web3Modal({
