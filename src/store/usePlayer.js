@@ -93,6 +93,8 @@ export const usePlayerStore = defineStore('player', () => {
       } else {
         const myAccounts = await provider.getSigner().getAddress();
 
+        console.log(myAccounts);
+
         playerAccount.value = myAccounts;
         await getGameId();
         await returnBoard();
